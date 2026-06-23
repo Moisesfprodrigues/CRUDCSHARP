@@ -1,90 +1,223 @@
-CRUD de Alunos em C# com Microsoft Access
-Descrição
+# 🎓 CRUD de Alunos em C# com Microsoft Access
 
-Este projeto é uma aplicação Windows Forms desenvolvida em C# que implementa as operações básicas de CRUD (Create, Read, Update e Delete) utilizando uma base de dados Microsoft Access (.accdb).
+## 📖 Descrição
 
-A aplicação permite gerir registos de alunos através de uma interface gráfica simples, sendo adequada para fins educativos e para introdução ao acesso a bases de dados com ADO.NET.
+Este projeto consiste numa aplicação **Windows Forms desenvolvida em C#** que implementa as operações básicas de **CRUD (Create, Read, Update e Delete)** utilizando uma base de dados **Microsoft Access (.accdb)**.
 
-Funcionalidades
-Inserir novos alunos
-Listar alunos existentes
-Atualizar dados de um aluno
-Apagar alunos
-Visualizar os registos numa DataGridView
-Selecionar um registo para edição através da grelha
-Estrutura da Base de Dados
+A aplicação permite gerir registos de alunos através de uma interface gráfica simples e intuitiva, sendo ideal para fins educativos e para aprendizagem de acesso a bases de dados com **ADO.NET**.
 
-Tabela: alunos
+---
 
-Campo	Tipo
-ID	AutoNumeração (Chave Primária)
-nome	Texto Curto
-numero	Número
-nota	Número
-Exemplo de Registos
-ID	Nome	Número	Nota
-1	João Silva	1001	18
-2	Maria Costa	1002	16
-3	Pedro Sousa	1003	14
-Ligação à Base de Dados
+## ✨ Funcionalidades
 
-A aplicação utiliza a seguinte string de ligação:
+✅ Inserir novos alunos
 
-Provider=Microsoft.ACE.OLEDB.12.0;
-Data Source=D:\crud_exemplo\db.accdb;
+✅ Consultar todos os alunos
 
-Importante: Antes de executar o projeto deverá alterar o caminho da base de dados para o local onde se encontra o ficheiro db.accdb.
+✅ Atualizar dados de alunos existentes
 
-Exemplo:
+✅ Apagar alunos
 
-con = new OleDbConnection(
-@"Provider=Microsoft.ACE.OLEDB.12.0;
-Data Source=C:\Projetos\CRUD\db.accdb;");
-Operações Disponíveis
-Inserir
+✅ Visualizar registos numa **DataGridView**
 
-Adiciona um novo aluno à base de dados.
+✅ Selecionar registos diretamente da tabela para edição
 
+---
+
+## 🛠 Tecnologias Utilizadas
+
+* **C#**
+* **Windows Forms**
+* **Microsoft Access (.accdb)**
+* **ADO.NET**
+* **OleDbConnection**
+* **OleDbCommand**
+* **OleDbDataAdapter**
+* **DataGridView**
+
+---
+
+## 🗄 Estrutura da Base de Dados
+
+Tabela: **alunos**
+
+| Campo  | Tipo                           |
+| ------ | ------------------------------ |
+| ID     | AutoNumeração (Chave Primária) |
+| nome   | Texto Curto                    |
+| numero | Número                         |
+| nota   | Número                         |
+
+---
+
+## 📋 Operações Disponíveis
+
+### ➕ Inserir Aluno
+
+Adiciona um novo registo à base de dados.
+
+```sql
 INSERT INTO alunos (nome, numero, nota)
 VALUES (@nome, @num, @nota)
-Consultar
+```
 
-Carrega todos os registos existentes.
+### 🔍 Consultar Alunos
 
+Lista todos os alunos existentes.
+
+```sql
 SELECT * FROM alunos
-Atualizar
+```
 
-Atualiza os dados de um aluno selecionado.
+### ✏️ Atualizar Aluno
 
+Atualiza os dados do aluno selecionado.
+
+```sql
 UPDATE alunos
 SET nome=@nome,
     numero=@num,
     nota=@nota
 WHERE ID=@id
-Apagar
+```
+
+### 🗑 Apagar Aluno
 
 Remove um aluno da base de dados.
 
+```sql
 DELETE FROM alunos
 WHERE ID=@id
-Como Executar
-Clonar ou descarregar este repositório.
-Abrir a solução no Visual Studio.
-Instalar o Microsoft Access Database Engine caso necessário.
-Ajustar o caminho do ficheiro db.accdb.
-Compilar e executar o projeto.
-Objetivos Pedagógicos
+```
+
+---
+
+## 🔗 Ligação à Base de Dados
+
+A aplicação utiliza uma ligação **OLEDB** para comunicar com o Microsoft Access.
+
+```csharp
+con = new OleDbConnection(
+@"Provider=Microsoft.ACE.OLEDB.12.0;
+Data Source=D:\crud_exemplo\db.accdb;");
+```
+
+> ⚠️ **Importante:** Antes de executar o projeto deverá alterar o caminho da base de dados para a localização correta do ficheiro `db.accdb`.
+
+---
+
+## 🚀 Como Executar
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/SEU_UTILIZADOR/SEU_REPOSITORIO.git
+```
+
+### 2. Abrir o Projeto
+
+Abrir a solução no **Visual Studio**.
+
+### 3. Configurar a Base de Dados
+
+Editar a string de ligação para apontar para o ficheiro `db.accdb`.
+
+### 4. Compilar
+
+```text
+Build → Build Solution
+```
+
+### 5. Executar
+
+```text
+Debug → Start Debugging
+```
+
+ou pressionar:
+
+```text
+F5
+```
+
+---
+
+## 📸 Capturas de Ecrã
+
+Adicione aqui imagens da aplicação.
+
+### Interface Principal
+
+```text
+/screenshots/interface-principal.png
+```
+
+### Inserção de Dados
+
+```text
+/screenshots/inserir-aluno.png
+```
+
+### Consulta de Dados
+
+```text
+/screenshots/consulta-alunos.png
+```
+
+---
+
+## 🎯 Objetivos Pedagógicos
 
 Este projeto foi desenvolvido para demonstrar:
 
-Ligação a bases de dados Access
-Utilização de ADO.NET
-Operações CRUD
-Utilização de parâmetros SQL
-Manipulação de DataGridView
-Desenvolvimento de aplicações Windows Forms
-Autor
+* Ligação a bases de dados Microsoft Access
+* Utilização de ADO.NET
+* Operações CRUD
+* Queries parametrizadas
+* Utilização de DataGridView
+* Desenvolvimento de aplicações Windows Forms
 
-Moisés Rodrigues
+---
 
-Projeto desenvolvido para fins educativos e de aprendizagem de programação em C# com acesso a bases de dados.
+## 📂 Estrutura do Projeto
+
+```text
+app_crud_db/
+│
+├── Form1.cs
+├── Form1.Designer.cs
+├── Program.cs
+├── db.accdb
+├── README.md
+│
+└── screenshots/
+    ├── interface-principal.png
+    ├── inserir-aluno.png
+    └── consulta-alunos.png
+```
+
+---
+
+## 👨‍🏫 Destinatários
+
+Este projeto é indicado para:
+
+* Alunos de Programação
+* Cursos Profissionais de Informática
+* Introdução a Bases de Dados
+* Aprendizagem de C# Windows Forms
+* Formação em ADO.NET
+
+---
+
+## 👤 Autor
+
+**Moisés Rodrigues**
+
+Professor de Informática, Programação, Redes e Automação.
+
+---
+
+## 📜 Licença
+
+Este projeto é disponibilizado para fins **educativos e de aprendizagem**.
