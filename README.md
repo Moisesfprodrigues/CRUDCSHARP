@@ -142,30 +142,6 @@ F5
 
 ---
 
-## 📸 Capturas de Ecrã
-
-Adicione aqui imagens da aplicação.
-
-### Interface Principal
-
-```text
-/screenshots/interface-principal.png
-```
-
-### Inserção de Dados
-
-```text
-/screenshots/inserir-aluno.png
-```
-
-### Consulta de Dados
-
-```text
-/screenshots/consulta-alunos.png
-```
-
----
-
 ## 🎯 Objetivos Pedagógicos
 
 Este projeto foi desenvolvido para demonstrar:
@@ -189,11 +165,7 @@ app_crud_db/
 ├── Program.cs
 ├── db.accdb
 ├── README.md
-│
-└── screenshots/
-    ├── interface-principal.png
-    ├── inserir-aluno.png
-    └── consulta-alunos.png
+
 ```
 
 ---
