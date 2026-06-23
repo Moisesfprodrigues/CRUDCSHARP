@@ -1,0 +1,10 @@
+D:\crud_exemplo\app-crud-db\app-crud-db\bin\Debug\app-crud-db.exe.config
+D:\crud_exemplo\app-crud-db\app-crud-db\bin\Debug\app-crud-db.exe
+D:\crud_exemplo\app-crud-db\app-crud-db\bin\Debug\app-crud-db.pdb
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app-crud-db.csproj.AssemblyReference.cache
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app_crud_db.Form1.resources
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app_crud_db.Properties.Resources.resources
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app-crud-db.csproj.GenerateResource.cache
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app-crud-db.csproj.CoreCompileInputs.cache
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app-crud-db.exe
+D:\crud_exemplo\app-crud-db\app-crud-db\obj\Debug\app-crud-db.pdb
